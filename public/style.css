@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef;
+  padding: 20px;
+}
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px #aaa;
+}
+.weather-box {
+  margin-top: 20px;
+  padding: 10px;
+  background: #def;
+  border-radius: 8px;
+}

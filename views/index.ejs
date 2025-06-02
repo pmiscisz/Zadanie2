@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🌤️ Weather App</h1>
+    <form method="POST">
+        <label>Country:</label>
+        <select name="country" onchange="this.form.submit()">
+            <% countries.forEach(country => { %>
+                <option value="<%= country %>" <%= country === selectedCountry ? "selected" : "" %>><%= country %></option>
+            <% }) %>
+        </select>
+        <label>City:</label>
+        <select name="city">
+            <% cities.forEach(city => { %>
+                <option value="<%= city %>" <%= city === selectedCity ? "selected" : "" %>><%= city %></option>
+            <% }) %>
+        </select>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <% if (weather) { %>
+        <div class="weather-box">
+            <h2>Weather in <%= selectedCity %></h2>
+            <p><strong>Temperature:</strong> <%= weather.main.temp %>°C</p>
+            <p><strong>Condition:</strong> <%= weather.weather[0].description %></p>
+            <p><strong>Humidity:</strong> <%= weather.main.humidity %>%</p>
+        </div>
+    <% } %>
+</div>
+</body>
+</html>
