@@ -6,7 +6,7 @@ RUN npm install
 
 # Etap 2 – Aplikacja
 FROM node:20-slim
-LABEL org.opencontainers.image.authors="Jan Kowalski"
+LABEL org.opencontainers.image.authors="Patryk Miscisz"
 WORKDIR /app
 
 COPY --from=builder /app/node_modules ./node_modules

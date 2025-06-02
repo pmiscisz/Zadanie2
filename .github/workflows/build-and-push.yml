@@ -6,7 +6,7 @@ on:
 
 env:
   IMAGE_NAME: ghcr.io/pmiscisz/weather-app
-  CACHE_REPO: pmiscisz/weather-app-cache
+  CACHE_REPO: ziabas/weather-app-cache
 
 jobs:
   build-and-push:
