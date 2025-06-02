@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const AUTHOR = "Patryk Miścisz";
+const AUTHOR = "Patryk Miscisz";
 const API_KEY = process.env.WEATHER_API_KEY;
 
 const locations = {
