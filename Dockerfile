@@ -3,14 +3,10 @@ FROM node:20-slim AS builder
 WORKDIR /app
 COPY package.json ./
 RUN npm install
-RUN apt update && apt upgrade -y && \
-    apt install --only-upgrade libc-bin libc6 perl-base zlib1g -y && \
-    apt autoremove -y
-
 
 # Etap 2 – Aplikacja
 FROM node:20-slim
-LABEL org.opencontainers.image.authors="Patryk Miscisz"
+LABEL org.opencontainers.image.authors="Jan Kowalski"
 WORKDIR /app
 
 COPY --from=builder /app/node_modules ./node_modules
